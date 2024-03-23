@@ -1,11 +1,16 @@
 
 const Content = () => {
     
- return (
+  return (
     <div className='card'>
-       
+      {filteredProducts.map(product => (
+        <div key={product.id}>
+          <p>{product.name}</p>
+          <p>${product.price}</p>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;
